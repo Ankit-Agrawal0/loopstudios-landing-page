@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +10,16 @@
           box-sizing: border-box;
 }
 
-header, header nav, header nav ul {
+body {
+  overflow-x: hidden;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+header, header nav, header nav ul, main div.creations, main div.creations .title, footer .footer-data {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,7 +35,7 @@ header, header nav, header nav ul {
 
 header {
   height: 600px;
-  width: 100vw !important;
+  width: 100% !important;
   position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -77,6 +90,7 @@ header nav ul a {
 header nav .hamburger {
   display: none;
   z-index: 3;
+  cursor: pointer;
 }
 
 header nav .hamburger div {
@@ -124,24 +138,23 @@ header .header-title h1 {
 }
 
 main div.vr {
-  width: 70vw;
-  height: 100vh;
+  overflow-x: hidden;
+  width: 82vw;
+  height: auto;
   margin: 0 auto;
   position: relative;
 }
 
 main div.vr img {
-  margin: 200px auto;
+  margin: 150px auto;
   height: auto;
-  width: 50vw;
+  width: 650px;
 }
 
 main div.vr div {
-  padding: 50px;
-  width: 600px;
-  position: absolute;
-  right: -150px;
-  bottom: 100px;
+  padding: 80px;
+  width: 650px;
+  height: auto;
   background-color: white;
   z-index: 2;
 }
@@ -149,7 +162,7 @@ main div.vr div {
 main div.vr div h2 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
-  margin: 10px;
+  margin: 10px auto 0 auto;
   text-transform: uppercase;
   font-size: 45px;
 }
@@ -157,10 +170,188 @@ main div.vr div h2 {
 main div.vr div p {
   font-family: "Alata", sans-serif;
   color: #8c8c8c;
-  margin: 10px;
+  margin: 10px auto 0 auto;
+  font-weight: 400;
+  line-height: 25px;
 }
 
-@media screen and (max-width: 700px) {
+main div.creations {
+  width: 82vw;
+  margin: auto auto 200px auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main div.creations button {
+  background: transparent;
+  border: 2px solid black;
+  text-transform: uppercase;
+  font-family: "Alata", sans-serif;
+  padding: 5px 35px;
+  font-size: 18px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+main div.creations button:hover {
+  background-color: black;
+  color: white;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+main div.creations .title {
+  width: 100%;
+  margin: 10px auto 40px auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main div.creations .title h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 45px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+main div.creations .products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main div.creations .products .image {
+  position: relative;
+  margin: 9px;
+  -webkit-filter: brightness(95%);
+          filter: brightness(95%);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+main div.creations .products .image img {
+  -webkit-filter: brightness(85%);
+          filter: brightness(85%);
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+main div.creations .products .image span {
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  color: white;
+  font-size: 35px;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  z-index: 2;
+  width: 70%;
+}
+
+main div.creations .products .image:hover img {
+  -webkit-filter: opacity(0.2);
+          filter: opacity(0.2);
+}
+
+main div.creations .products .image:hover span {
+  color: black;
+}
+
+footer {
+  height: 180px;
+  width: 100vw;
+  background: black;
+  color: white;
+}
+
+footer .footer-data {
+  width: 90vw;
+  margin: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .footer-data .footer-left {
+  padding: 30px;
+}
+
+footer .footer-data .footer-left ul {
+  margin-top: 20px;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer-data .footer-left ul li {
+  cursor: pointer;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+
+footer .footer-data .footer-right {
+  padding: 30px;
+}
+
+footer .footer-data .footer-right ul {
+  margin-bottom: 20px;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer-data .footer-right ul li {
+  cursor: pointer;
+}
+
+footer .footer-data .footer-right p {
+  color: dimgray;
+  font-family: "Alata", sans-serif;
+}
+
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+footer .attribution a {
+  color: #3e52a3;
+}
+
+@media (min-width: 900px) {
+  .mobile {
+    display: none;
+  }
+  main div.vr div {
+    position: absolute;
+    right: -80px;
+    bottom: 75px;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 900px) {
+  .desktop {
+    display: none;
+  }
   .header-acive {
     height: 100vh;
     background-color: black;
@@ -209,6 +400,120 @@ main div.vr div p {
     font-size: 20px;
     color: white;
   }
+  header .header-title {
+    width: 90vw;
+    padding: 30px 15px;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    margin: auto;
+  }
+  header .header-title h1 {
+    font-size: 40px;
+    line-height: 44px;
+  }
+  main div.vr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px;
+  }
+  main div.vr img {
+    width: 80vw;
+    margin: 100px auto 10px auto;
+  }
+  main div.vr div {
+    width: 110vw;
+    padding: 10px;
+  }
+  main div.vr div h2 {
+    font-size: 38px;
+    margin: 40px 0 20px 0;
+    width: 100vw;
+    text-align: center;
+  }
+  main div.vr div p {
+    text-align: center;
+    line-height: 28px;
+    width: 70%;
+    margin: 20px auto 40px auto;
+  }
+  main div.creations {
+    width: 100vw;
+    margin: auto;
+  }
+  main div.creations button {
+    margin: 30px auto 130px auto;
+  }
+  main div.creations .title h3 {
+    width: 100vw;
+    font-size: 38px;
+    text-align: center;
+    margin: auto;
+  }
+  main div.creations .image {
+    width: 80vw;
+  }
+  main div.creations .image img {
+    width: 100%;
+  }
+  main div.creations .image span {
+    width: 50% !important;
+  }
+  footer {
+    height: 100%;
+  }
+  footer .footer-data {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer-data .footer-left {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .footer-data .footer-left ul {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    row-gap: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer-data .footer-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .footer-data .footer-right ul {
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
+  }
+  footer .footer-data .footer-right p {
+    text-align: center;
+  }
 }
 
 @-webkit-keyframes fade {
@@ -235,14 +540,5 @@ main div.vr div p {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
   }
-}
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: #3e52a3;
 }
 /*# sourceMappingURL=main.css.map */

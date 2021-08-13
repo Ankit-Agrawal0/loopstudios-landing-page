@@ -11,15 +11,15 @@
 
 </head>
 <body>
-  <header>
+  <header id="About">
     <nav>
       <img src="images/logo.svg" alt="LOOPSTUDIOS">
       <ul>
-        <li><a href="#">About</a></li>
+        <li><a href="#About">About</a></li>
         <li><a href="#">Careers</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Support</a></li>
+        <li><a href="#Event">Events</a></li>
+        <li><a href="#Products">Products</a></li>
+        <li><a href="#Support">Support</a></li>
       </ul>
       <div class="hamburger">
         <div class="bar1"></div>
@@ -30,10 +30,11 @@
     <div class="header-title">
       <h1>Immersive experiences that deliver</h1>
     </div>
-    <img class="header-background" src="images/desktop/image-hero.jpg" alt="">
+    <img class="desktop header-background" src="images/desktop/image-hero.jpg" alt="">
+    <img class="mobile header-background" src="images/mobile/image-hero.jpg" alt="">
   </header>
   <main>
-    <div class="vr">
+    <div class="vr" id="Event">
       <img src="images/desktop/image-interactive.jpg" alt="">
       <div class="text">
         <h2>The leader in interactive VR</h2>
@@ -43,50 +44,84 @@
           to their brand.</p>
       </div>
     </div>
-    <!-- <div class="creations">
+     <div class="creations" id="Products">
       <div class="title">
         <h3>Our creations</h3>
-        <button>See all</button>
+        <button class="desktop">See all</button>
       </div>
       <div class="products">
         <div class="image">
-          <img src="" alt="">
-          <span></span>
+          <img class='desktop' src="images/desktop/image-deep-earth.jpg" alt="">
+          <img class='mobile' src="images/mobile/image-deep-earth.jpg" alt="">
+          <span>Deep earth</span>
         </div>
         <div class="image">
-          <img src="" alt="">
-          <span></span>
+          <img class='desktop' src="images/desktop/image-night-arcade.jpg" alt="">
+          <img class='mobile' src="images/mobile/image-night-arcade.jpg" alt="">
+          <span>Night arcade</span>
         </div>
         <div class="image">
-          <img src="" alt="">
-          <span></span>
+          <img class='desktop' src="images/desktop/image-soccer-team.jpg" alt="">
+          <img class='mobile' src="images/mobile/image-soccer-team.jpg" alt="">
+          <span>Soccer team VR</span>
         </div>
         <div class="image">
-          <img src="" alt="">
-          <span></span>
+          <img class='desktop' src="images/desktop/image-grid.jpg" alt="">
+          <img class='mobile' src="images/mobile/image-grid.jpg" alt="">
+          <span>The grid</span>
         </div>
         <div class="image">
-          <img src="" alt="">
-          <span></span>
+          <img class='desktop' src="images/desktop/image-from-above.jpg" alt="">
+          <img class='mobile' src="images/mobile/image-from-above.jpg" alt="">
+          <span>From up above VR</span>
         </div>
         <div class="image">
-          <img src="" alt="">
-          <span></span>
+          <img class='desktop' src="images/desktop/image-pocket-borealis.jpg" alt="">
+          <img class='mobile' src="images/mobile/image-pocket-borealis.jpg" alt="">
+          <span>Pocket borealis</span>
         </div>
         <div class="image">
-          <img src="" alt="">
-          <span></span>
+          <img class='desktop' src="images/desktop/image-curiosity.jpg" alt="">
+          <img class='mobile' src="images/mobile/image-curiosity.jpg" alt="">
+          <span>The curiosity</span>
         </div>
         <div class="image">
-          <img src="" alt="">
-          <span></span>
+          <img class='desktop' src="images/desktop/image-fisheye.jpg" alt="">
+          <img class='mobile' src="images/mobile/image-fisheye.jpg" alt="">
+          <span>Make it fisheye</span>
         </div>
       </div>
-    </div>
-    <footer>
-
-    </footer> -->
+      <button class="mobile">See all</button>
+    </div> 
+    
   </main>
+  <footer id="Support">
+    <div class="footer-data">
+      <div class="footer-left">
+        <img src="images/logo.svg" alt="Loopstudios">
+        <ul>
+          <li><a href="#About"></a>About</li>
+          <li><a href="#"></a>Careers</li>
+          <li><a href="#Events"></a>Events</li>
+          <li><a href="#Products"></a>Products</li>
+          <li><a href="#Support"></a>Support</li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <ul>
+          <li><a href="https://www.facebook.com"><img src="images/icon-facebook.svg" alt="facebook"></a></li>
+          <li><a href="https://www.twitter.com"><img src="images/icon-twitter.svg" alt="twitter"></a></li>
+          <li><a href="https://www.pinterest.com"><img src="images/icon-pinterest.svg" alt="pinterest"></a></li>
+          <li><a href="https://www.instagram.com"><img src="images/icon-instagram.svg" alt="instagram"></a></li>
+        </ul>
+        <p>© 2021 Loopstudios. All rights reserved.</p>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/Ankit-Agrawal0">Ankit Agrawal</a>.
+    </div> 
+  </footer> 
   <!-- About
   Careers
   Events
@@ -123,10 +158,7 @@
 
   © 2021 Loopstudios. All rights reserved.
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+  -->
   <script src="./script.js"></script>
 
 </body>
