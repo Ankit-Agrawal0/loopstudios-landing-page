@@ -14,6 +14,11 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 a:hover {
   text-decoration: underline;
   text-decoration-thickness: 2px;
@@ -272,7 +277,7 @@ main div.creations .products .image:hover span {
 
 footer {
   height: 180px;
-  width: 100vw;
+  width: 100%;
   background: black;
   color: white;
 }
@@ -343,7 +348,7 @@ footer .attribution a {
   }
   main div.vr div {
     position: absolute;
-    right: -80px;
+    right: -40px;
     bottom: 75px;
   }
 }

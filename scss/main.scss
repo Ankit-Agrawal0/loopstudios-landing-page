@@ -16,6 +16,10 @@ html{
 body{
     overflow-x: hidden;
 }
+a{
+    text-decoration: none;
+    color: $white;
+}
 a:hover{
     text-decoration: underline;
     text-decoration-thickness: 2px;
@@ -233,7 +237,7 @@ main{
 }
 footer{
     height: 180px;
-    width: 100vw;
+    width: 100%;
     background: $Black;
     color: $white;
     .footer-data{
@@ -289,7 +293,7 @@ footer{
        div.vr{
             div{
                 position: absolute;
-                right: -80px;
+                right: -40px;
                 bottom: 75px;
             }
        }
